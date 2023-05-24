@@ -4,3 +4,19 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bkgimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#amal {
+    font-size:50px;
+}
