@@ -146,8 +146,9 @@
                 <input type="text" name="Name" placeholder="Your Name" />
                 <input type="email" name="Email" id="" placeholder="Your Email" />
                 <textarea name="Message" id="" cols="30" rows="10" placeholder="Write Message here..."></textarea>
-                <button type="submit" class="contact-button"> Submit </button> 
+                <input type="submit" class="contact-button" value="Submit" >
             </form>
+            <span id="msg"></span>
         </div>
     </section>
     <!-- Copyright -->
@@ -164,11 +165,18 @@
     const scriptURL =
   "https://script.google.com/macros/s/AKfycby43mtKGQZtTLbkeJORrqF9TrjqzEPLxTTlGgEinVjhlgp184H2JgWh6lKbfCDegIA4/exec";
 const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg")
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => console.log("Success!", response))
+    .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+ })
     .catch((error) => console.error("Error!", error.message));
 });
 

@@ -530,3 +530,9 @@ form textarea {
 .footer-name {
     color: rgb(237, 174, 163);
 }
+#msg {
+
+    color: #61b752;
+    margin-top: -10px;
+    display:block;
+}
