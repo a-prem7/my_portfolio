@@ -107,6 +107,10 @@
 
         </div>
     </section>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
         <div class="heading">
@@ -138,11 +142,11 @@
             <span></span>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Your Name" />
-                <input type="email" name="" id="" placeholder="Your Email" />
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message here..."></textarea>
-                <input type="button" value="Submit" class="contact-button" />
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" />
+                <input type="email" name="Email" id="" placeholder="Your Email" />
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="Write Message here..."></textarea>
+                <button type="submit" class="contact-button"> Submit </button> 
             </form>
         </div>
     </section>
@@ -156,5 +160,17 @@
     <!-- Link To JS -->
     <script src="./js/script.js"></script>
 </body>
+<script>
+    const scriptURL =
+  "https://script.google.com/macros/s/AKfycby43mtKGQZtTLbkeJORrqF9TrjqzEPLxTTlGgEinVjhlgp184H2JgWh6lKbfCDegIA4/exec";
+const form = document.forms["submit-to-google-sheet"];
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => console.log("Success!", response))
+    .catch((error) => console.error("Error!", error.message));
+});
+
+</script>
 </html>
