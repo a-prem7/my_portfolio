@@ -20,3 +20,17 @@ body {
 #amal {
     font-size:50px;
 }
+.container {
+    padding: 10px 10% 
+}
+nav {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
