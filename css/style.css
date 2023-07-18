@@ -443,6 +443,9 @@ form textarea {
   .about-img {
     display: flex;
     justify-content: center;
+    padding: 0, 0, 20px, 0;
+    
+    
   }
   .skills-container {
     grid-template-columns: 1fr;
