@@ -28,6 +28,8 @@
             <li><a href="#contact">Contact</a></li>
             <div class="bx bx-moon" id="darkmode"></div>
         </ul>
+       
+
     </header>
     <!-- Home -->
 
@@ -42,9 +44,9 @@
             <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" alt="" />
         </div>
         <div class="home-text">
-            <span>Hi, I'm</span>
-            <h1>Amal Prem</h1>
-            <h2>Software Engineer</h2>
+            <span>Hi, I'm</span><br>
+            <h1 id="amal">Amal Prem</h1>
+            <h2 id="title">Software Engineer</h2>
             <p>
                 With a passion for innovation and a commitment</br>
                 to excellence, I craft elegant and robust </br>
@@ -177,7 +179,7 @@
     <!-- Copyright -->
     <div class="copyright">
         <p>
-            Created By <span class="footer-name">Amal Prem </span>| All
+            Created By <span class="footer-name">Amal Prem </span>| &copy; 2023 All
             Rights Reserved.
         </p>
     </div>
@@ -202,6 +204,17 @@ form.addEventListener("submit", (e) => {
  })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// adds new code
+
+
+  const menuIcon = document.getElementById("menu-icon");
+  const navbar = document.getElementById("navbar");
+
+  menuIcon.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+
 
 </script>
 </html>
