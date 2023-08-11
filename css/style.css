@@ -493,7 +493,7 @@ form textarea {
     margin-left: 25%;
   }
 }
-@media (max-width: 340px) {
+ @media (max-width: 340px) {
   :root {
     --big-font: 1.7rem;
     --medium-font: 1.1rem;
@@ -515,12 +515,12 @@ form textarea {
     width: 300px;
   }
   .contact-button{
-    margin-left: 25%;
+    margin-left: 35%;
   }
 }
 
 .footer-name {
-    color:rgb(162, 161, 191);
+    color:rgb(237, 174, 163);
 }
 #msg {
 
